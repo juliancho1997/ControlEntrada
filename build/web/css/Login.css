@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/03/2018, 10:48:21 PM
+    Author     : Julian Guerrero
+*/
+body{
+    background: url(../imagenes/Wallpaper-Anime-Hd-005.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+.cont{
+    margin: 5% 5% 0 5%;
+    padding: 5%;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.6);
+    width: 17%;
+    height: 10%;
+}
+
+.cont .titu{
+    
+    text-align: center;
+    background: #04B404;
+}
+.cont *.texto{
+    width: 95%;
+    margin-bottom: 3%; 
+    outline: none;
+    border: 0;
+}
+.cont *.boton{
+    font-size: 90%;
+    background: #04B404;
+    
+}

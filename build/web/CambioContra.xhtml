@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Cambiar Contraseña</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!--<link href="css/ShangePass.css" type="text/css" rel="stylesheet"></link>-->
+        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+        <link href="css/prueba.css" type="text/css" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"></link>
+        <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
+    </h:head>
+    <h:body>
+        <h:form> 
+            <p:growl id="growl" showDetail="true" sticky="true" />  
+
+            <div class="cont " >
+
+                <!--<p:outputLabel for="msg" value="Nombre de Usuario: " />-->
+                <h3 class="bg-info">CONFIRMAR EXISTENSIA DE USUARIO</h3>
+                <p:inputText class="texto form-control" placeholder="Nombre de Usuario" value="#{restaurarContraBEAN.message}" required="true" />
+                <br/>
+                <p:commandButton class="boton btn btn-default" value="Siguiente" action="#{restaurarContraBEAN.restaurarContr()}"  update="growl" />  
+            </div>
+        </h:form>  
+    </h:body>
+</html>
+

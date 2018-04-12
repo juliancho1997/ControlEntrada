@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Restaurar Contraseña</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
+        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+        <!--<link href="css/Login.css" type="text/css" rel="stylesheet"></link>-->
+        <link href="css/prueba.css" type="text/css" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"></link>
+    </h:head>
+    <h:body>
+        <div class="cont">
+            <h:form>
+                <div class="titu">
+                    <h3 class="bg-info">CAMBIO DE CONTRASEÑA</h3>
+                </div>
+
+                <p:inputText  class="texto form-control" placeholder="Nombre Usuario" value="#{restaurarContraBEAN.usuario}" title="Ej=alguin97" />
+                <br/>
+                
+                <p:password class="texto form-control" placeholder="Contraseña" value="#{restaurarContraBEAN.passw}"/>
+                <br/>
+                <!--<p:password placeholder="Confirma Contras"/>-->
+                <p:commandButton class="boton btn btn-default" value="Confirmar" action="#{restaurarContraBEAN.fullDateUpdate()}"/>
+            </h:form>
+        </div>
+
+    </h:body>
+</html>

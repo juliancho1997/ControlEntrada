@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Login</title>
+        <!--https://code.jquery.com/jquery-3.3.1.min.js-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!--<link href="css/Login.css" type="text/css" rel="stylesheet"></link>-->
+        <link href="css/prueba.css" type="text/css" rel="stylesheet"></link>
+        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"></link>
+        <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
+
+        <!-- <link rel="stylesheet"href="VisualPaginaLoguin.css">-->
+    </h:head>
+    <h:body>
+        
+        <div class="cont col-md-4">
+            <h:form  class="formulario">
+                <div class="titu">
+                    <h3 class="bg-info">INGRESO</h3>
+                </div>
+                <p:inputText class="texto form-control" value="#{loginBean.usuario}" placeholder="Usuario" title="Introduce el nombre del usuario asignado"></p:inputText>
+                <br/>
+                <p:password class="texto form-control" value="#{loginBean.clave}" placeholder="Contraseña" title="Inserta contraseña"></p:password>
+                <br/>               
+                <p:commandButton class="boton btn btn-default"  value="Ingresar" action="#{loginBean.loguearse()}" title="Ingresar"></p:commandButton>
+                <!--<p:commandButton class="boton btn btn-default"  value="Nuevo Usuario" action=""></p:commandButton-->
+                <br></br>
+                <p:commandLink class="link " value="¿olvide mi contraseña?" action="#{loginBean.olvidoContra()}" ></p:commandLink>
+                <h:message for="link"></h:message>
+            </h:form>
+        </div>
+        <script src="js/jquery.js"/>
+        <script src="resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
+    </h:body>
+</html>
+

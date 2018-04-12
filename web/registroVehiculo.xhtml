@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Registro de Vehículos</title>
+        <!--Esto sirve para conectar el css con la página -->
+        <link href="${facesContext.externalContext.requestContextPath}/css/paginaDise.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body styleClass="color">
+        <!--Esto es para crear un link y hacerlo como un punto-->
+        <ul>
+            <li><a href="welcomePrimefaces.xhtml">welcomePrimefaces</a></li>
+        </ul>
+        <h:panelGrid id="margen" columns="4" styleClass="espacio">
+            <p:outputLabel value="Fecha Salida:"/>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel  value="Fecha Entrada:" />
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="Vehículo"></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="N° Placa"></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="Conductor" ></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="Acompañante"></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="Destino"></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="KmEntrada"></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="KmSalida"></p:outputLabel>
+            <p:inputText></p:inputText>
+
+            <p:outputLabel value="Observaciones"></p:outputLabel>
+            <p:inputTextarea></p:inputTextarea>
+
+
+            <p:commandButton value="Registrar Salida" ></p:commandButton>
+            <p:commandButton value="Actualizar Observaciones" ></p:commandButton>
+            <p:commandButton value="Registrar Entrada" ></p:commandButton>
+            <p:commandButton value="Consultar" action="#{registroBEAN.cargarVehiculo()}"></p:commandButton>  
+        </h:panelGrid>
+
+        <p:dataTable value="#{registroBEAN.lista}" var="re">
+            <p:column headerText="Fecha Salida">
+                <p:outputLabel value="#{re.fechaSa}"/>
+            </p:column>
+
+            <p:column headerText="Fecha Entrada">
+                <p:outputLabel value="#{re.fechaEn}"/>
+            </p:column>
+
+            <p:column headerText="Vehiculo">
+                <p:outputLabel value="#{re.vehiculo}"/>
+            </p:column>
+
+            <p:column headerText="N° Placa">
+                <p:outputLabel value="#{re.nPlaca}"/>
+            </p:column>
+
+            <p:column headerText="Conductor">
+                <p:outputLabel value="#{re.conductor}"/>
+            </p:column>
+
+            <p:column headerText="Acompañante">
+                <p:outputLabel value="#{re.acompaniante}"/>
+            </p:column>
+
+            <p:column headerText="Destino">
+                <p:outputLabel value="#{re.destino}"/>
+            </p:column>
+
+            <p:column headerText="Km Entrada">
+                <p:outputLabel value="#{re.kmEn}"/>
+            </p:column>
+
+            <p:column headerText="Km Salida">
+                <p:outputLabel value="#{re.kmSa}"/>
+            </p:column>
+
+            <p:column headerText="Observaciones">
+                <p:outputLabel value="#{re.observaciones}"/>
+            </p:column>
+        </p:dataTable>
+
+    </h:body>
+</html>
+
