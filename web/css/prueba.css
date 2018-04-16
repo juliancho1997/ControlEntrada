@@ -12,6 +12,11 @@ and open the template in the editor.
     margin:  20% 30%;
     border: 1px;
 }
-.logo{
-    height: 10%;
+.izq{
+    width: 40;
+    float: left;
+}
+.der{
+    width: 40;
+    float: right;
 }

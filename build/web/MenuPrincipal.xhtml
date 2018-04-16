@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"></link>
+        <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panel>
+                <nav class="ola navbar navbar-default navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">ControlEntrada</a>
+                        </div>
+                        <div id="c navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="welcomePrimefaces.xhtml">Incio</a></li>
+                                <li class="dropdown">
+                                    <a href="welcomePrimefaces.xhtml" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro Aprendiz <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Registro PC</a></li>
+                                        <li><a href="#">Registro Entrada PC</a></li>
+                                        <li><a href="#">Registro Salida PC</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="welcomePrimefaces.xhtml" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registro Funcionario <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Registro PC</a></li>
+                                        <li><a href="#">Registro Entrada PC</a></li>
+                                        <li><a href="#">Registro Salida PC</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Equipacion Organizacion</li>
+                                        <li><a href="registroVehiculo.xhtml">Registro Vehiculo</a></li>
+                                        <li><a href="#">Registro Entrada Vehiculo</a></li>
+                                        <li><a href="#">Registro Salida Vehiculo</a></li>
+                                        <li><a href="registroVehiculo.xhtml">Registro Vehiculo</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="dropdown">
+                                    <a href="welcomePrimefaces.xhtml" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salir <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><h:form>
+                                                <p:commandLink   class="link" action="#{loginBean.cerrarSession()}" value="  Cerrar Seccion"></p:commandLink>                        
+                                            </h:form></li>
+
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+
+                        </div><!--/.nav-collapse -->
+
+                    </div>
+                </nav>
+                <script src="js/jquery.js"/>
+                <script src="resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

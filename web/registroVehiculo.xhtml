@@ -3,96 +3,116 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Registro de Vehículos</title>
-        <!--Esto sirve para conectar el css con la página -->
-        <link href="${facesContext.externalContext.requestContextPath}/css/paginaDise.css" rel="stylesheet" type="text/css"/>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!--<link href="css/Login.css" type="text/css" rel="stylesheet"></link>-->
+        <link href="css/prueba.css" type="text/css" rel="stylesheet"></link>
+        <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"></link>
+        <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
+
+        <!-- <link rel="stylesheet"href="VisualPaginaLoguin.css">-->
     </h:head>
     <h:body styleClass="color">
         <!--Esto es para crear un link y hacerlo como un punto-->
-        <ul>
-            <li><a href="welcomePrimefaces.xhtml">welcomePrimefaces</a></li>
-        </ul>
-        <h:panelGrid id="margen" columns="4" styleClass="espacio">
-            <p:outputLabel value="Fecha Salida:"/>
-            <p:inputText></p:inputText>
+        <ui:composition template="/MasterLayout.xhtml">
+            <ui:define name="windowTittle">
+                Registro Vehiculos
+            </ui:define>
+            <ui:define name="content">
 
-            <p:outputLabel  value="Fecha Entrada:" />
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="Vehículo"></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="N° Placa"></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="Conductor" ></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="Acompañante"></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="Destino"></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="KmEntrada"></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="KmSalida"></p:outputLabel>
-            <p:inputText></p:inputText>
-
-            <p:outputLabel value="Observaciones"></p:outputLabel>
-            <p:inputTextarea></p:inputTextarea>
+                <div class="cont col-md-3">
+                    <p:inputText class="form-control" placeholder="Fecha Salida" title="ej= 04/05/2018"></p:inputText>
 
 
-            <p:commandButton value="Registrar Salida" ></p:commandButton>
-            <p:commandButton value="Actualizar Observaciones" ></p:commandButton>
-            <p:commandButton value="Registrar Entrada" ></p:commandButton>
-            <p:commandButton value="Consultar" action="#{registroBEAN.cargarVehiculo()}"></p:commandButton>  
-        </h:panelGrid>
+                    <p:inputText class="form-control" placeholder="Fecha Entrada" title="ej= 04/05/2018"></p:inputText>
 
-        <p:dataTable value="#{registroBEAN.lista}" var="re">
-            <p:column headerText="Fecha Salida">
-                <p:outputLabel value="#{re.fechaSa}"/>
-            </p:column>
 
-            <p:column headerText="Fecha Entrada">
-                <p:outputLabel value="#{re.fechaEn}"/>
-            </p:column>
+                    <p:inputText class="form-control" placeholder="Vehiculo" title="ej= 04/05/2018"></p:inputText>
 
-            <p:column headerText="Vehiculo">
-                <p:outputLabel value="#{re.vehiculo}"/>
-            </p:column>
 
-            <p:column headerText="N° Placa">
-                <p:outputLabel value="#{re.nPlaca}"/>
-            </p:column>
+                    <p:inputText class="form-control" placeholder="N° Placa" title="ius 12"></p:inputText>
 
-            <p:column headerText="Conductor">
-                <p:outputLabel value="#{re.conductor}"/>
-            </p:column>
 
-            <p:column headerText="Acompañante">
-                <p:outputLabel value="#{re.acompaniante}"/>
-            </p:column>
+                    <p:inputText class="form-control" placeholder="Conductor" ></p:inputText>
 
-            <p:column headerText="Destino">
-                <p:outputLabel value="#{re.destino}"/>
-            </p:column>
 
-            <p:column headerText="Km Entrada">
-                <p:outputLabel value="#{re.kmEn}"/>
-            </p:column>
+                </div>
+                <div class="cont col-md-3 ">
+                    <h:form>
+                        <p:inputText class="form-control " placeholder="Acompañante" ></p:inputText>
 
-            <p:column headerText="Km Salida">
-                <p:outputLabel value="#{re.kmSa}"/>
-            </p:column>
 
-            <p:column headerText="Observaciones">
-                <p:outputLabel value="#{re.observaciones}"/>
-            </p:column>
-        </p:dataTable>
+                    <p:inputText class="form-control" placeholder="Destino" ></p:inputText>
+
+
+                    <p:inputText class="form-control" placeholder="Km Entrada" title="ej= 12500km" ></p:inputText>
+
+
+                    <p:inputText class="form-control" placeholder="Km Salida" ></p:inputText>
+
+
+                    <p:inputTextarea class="form-control" placeholder="Observaciones" ></p:inputTextarea>
+                    </h:form>
+                </div>
+
+
+                <p:commandButton value="Registrar Salida" class="btn btn-default" ></p:commandButton>
+                <p:commandButton value="Actualizar Observaciones" class="btn btn-default"></p:commandButton>
+                <p:commandButton value="Registrar Entrada" class="btn btn-default"></p:commandButton>
+                <p:commandButton value="Consultar" class="btn btn-default" action="#{registroBEAN.cargarVehiculo()}"></p:commandButton>  
+
+
+                <p:dataTable value="#{registroBEAN.lista}" var="re">
+                    <p:column headerText="Fecha Salida">
+                        <p:outputLabel value="#{re.fechaSa}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Fecha Entrada">
+                        <p:outputLabel value="#{re.fechaEn}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Vehiculo">
+                        <p:outputLabel value="#{re.vehiculo}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="N° Placa">
+                        <p:outputLabel value="#{re.nPlaca}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Conductor">
+                        <p:outputLabel value="#{re.conductor}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Acompañante">
+                        <p:outputLabel value="#{re.acompaniante}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Destino">
+                        <p:outputLabel value="#{re.destino}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Km Entrada">
+                        <p:outputLabel value="#{re.kmEn}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Km Salida">
+                        <p:outputLabel value="#{re.kmSa}"/>
+                    </p:column>
+                    <br/>
+                    <p:column headerText="Observaciones">
+                        <p:outputLabel value="#{re.observaciones}"/>
+                    </p:column>
+                </p:dataTable>
+            </ui:define>
+        </ui:composition>
+        <script src="js/jquery.js"/>
+        <script src="resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
+
 
     </h:body>
 </html>
