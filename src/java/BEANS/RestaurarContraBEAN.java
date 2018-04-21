@@ -51,8 +51,9 @@ HttpSession sessionUsuario;
         FacesContext context = FacesContext.getCurrentInstance();
         HttpSession sessionUsuario = (HttpSession) context.getExternalContext().getSession(true);
         sessionUsuario.setAttribute("users", message);
-
+        
         boolean op = udao.validarUsuario(message);
+        
 
         if (op) {
             System.out.println("esta dando primera validacion");
@@ -64,7 +65,10 @@ HttpSession sessionUsuario;
 
 
     }     
-     
+//     para insertar los datos del registro del vhiculo en la BD 
+    public void insertIntoBD(){
+        
+    } 
      public String fullDateUpdate() throws NoSuchAlgorithmException, SQLException{
 //         UsuarioDAOS udao = new UsuarioDAOS();
         Security se = new Security();

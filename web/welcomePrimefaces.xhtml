@@ -20,7 +20,7 @@
         <!-- <link rel="stylesheet"href="VisualPaginaLoguin.css">-->
     </h:head>
     <h:body>
-
+        <f:event listener="#{redireccionBean.isAdmin(event)}" type="preRenderView" />
 
         <ui:composition template="/MasterLayout.xhtml">
             <ui:define name="windowTittle">

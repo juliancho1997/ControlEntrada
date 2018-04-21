@@ -3,10 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title><ui:insert name="windowTittle"></ui:insert></title>
-         <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
+        <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
     </h:head>
     <h:body>
         <div id="heading">
@@ -14,12 +15,20 @@
                 <ui:include src="MenuPrincipal.xhtml"></ui:include>
             </ui:insert>
         </div>
-        
+
         <div id="content">
             <ui:insert name="content">
-                
+
             </ui:insert>
         </div>
+        <!--<div id="footer">
+            <ui:insert name="footer">
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
+            </ui:insert>
+        </div-->
+        
     </h:body>
 </html>
 

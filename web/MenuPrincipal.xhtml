@@ -12,6 +12,7 @@
         <link href='imagenes/logoSena.ico' rel='shortcut icon' type='image/x-icon'/>
     </h:head>
     <h:body>
+        <f:event listener="#{user.isAdmin}" type="preRenderView" />
         <h:form>
             <p:panel>
                 <nav class="ola navbar navbar-default navbar-static-top">
@@ -45,7 +46,7 @@
                                         <li role="separator" class="divider"></li>
                                         <li class="dropdown-header">Equipacion Organizacion</li>
                                         <li><a href="registroVehiculo.xhtml">Registro Vehiculo</a></li>
-                                        <li><a href="#">Registro Entrada Vehiculo</a></li>
+                                        <li><a href="registroEntradaVehiculo.xhtml">Registro Entrada Vehiculo</a></li>
                                         <li><a href="#">Registro Salida Vehiculo</a></li>
                                         <li><a href="registroVehiculo.xhtml">Registro Vehiculo</a></li>
                                     </ul>

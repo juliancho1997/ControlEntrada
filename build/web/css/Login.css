@@ -4,37 +4,20 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 14/03/2018, 10:48:21 PM
+    Created on : 18/04/2018, 02:06:29 PM
     Author     : Julian Guerrero
 */
-body{
-    background: url(../imagenes/Wallpaper-Anime-Hd-005.jpg);
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
-    font-family: 'Open Sans', sans-serif;
+
+.container
+{
+    width: 30%;
+    height: 30%;
+    margin-top: 5%;
+    background: #82C0F3;
+    border-radius: 5%
 }
-.cont{
-    margin: 5% 5% 0 5%;
-    padding: 5%;
-    border-radius: 5px;
-    background: rgba(0,0,0,0.6);
-    width: 17%;
-    height: 10%;
+.container *.ima{
+    margin-top: 3%;
+    margin-left: 35%;
 }
 
-.cont .titu{
-    
-    text-align: center;
-    background: #04B404;
-}
-.cont *.texto{
-    width: 95%;
-    margin-bottom: 3%; 
-    outline: none;
-    border: 0;
-}
-.cont *.boton{
-    font-size: 90%;
-    background: #04B404;
-    
-}

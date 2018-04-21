@@ -106,7 +106,7 @@ public class EntidadPostgres {
     }
   
 
-/***************************************************************************/ 
+///***************************************************************************/ 
 //  public static void main(String david[]){
 //      EntidadPostgres ep=new EntidadPostgres();
 //      
